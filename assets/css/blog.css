@@ -1,0 +1,838 @@
+.categories strong, .list h3, .list h3 a {
+    font-family: arciform_sansregular
+}
+
+#btn-blog {
+    color: #23939f;
+    border-bottom: 2px solid #23939f;
+    background: #444
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 15px
+}
+
+.categories {
+    margin-top: 75px;
+    padding-top: 60px;
+    background: url(../img/bg-call-to-action.jpg) center top no-repeat;
+    background-size: cover;
+    width: 100%;
+    float: left
+}
+
+.categories .row {
+    padding: 0;
+    width: 100%;
+    float: left;
+    height: 130px;
+    margin-bottom: 60px
+}
+
+.categories h1 {
+    font-size: 50px;
+    margin: 0;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    color: #fc7e10
+}
+
+.categories .tabs {
+    width: 100%;
+    float: left;
+    text-align: center;
+    background: 0 0
+}
+
+.categories .tabs .indicator {
+    background: #23939f;
+    display: none
+}
+
+.categories .tabs li {
+    display: inline;
+    line-height: 40px;
+    cursor: pointer
+}
+
+.categories .tabs .tab {
+    height: auto;
+    margin: 0!important
+}
+
+.categories .tabs .tab a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 -2px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    text-transform: uppercase
+}
+
+.categories .tabs .tab a.active {
+  border-bottom: 2px solid #23939f
+}
+
+.categories .tab.active, .list .btn, .single aside .back, .single aside ul li {
+    display: block
+}
+
+.categories .tabs a:hover {
+    text-decoration: none;
+    color: #fff
+}
+
+.categories .tabs a.active {
+    color: #23939f
+}
+
+.categories .tabs .line {
+    height: 2px;
+    width: 650px;
+    background: rgba(255, 255, 255, .2);
+    position: relative;
+    display: block;
+    float: none;
+    margin-left: -325px;
+    left: 50%
+}
+
+.categories .tabs .line span {
+    width: 140px;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #23939f;
+    -webkit-transition: left .6s;
+    transition: left .6s
+}
+
+.list .cat {
+  display: none
+}
+
+.list, .list .card {
+    width: 100%
+}
+
+.list, .list .card, .list .image {
+    position: relative;
+    float: left
+}
+
+.categories .tabs .line span.pos-1 {
+    left: 0
+}
+
+.categories .tabs .line span.pos-2 {
+    left: 170px
+}
+
+.categories .tabs .line span.pos-3 {
+    left: 340px
+}
+
+.categories .tabs .line span.pos-4 {
+    left: 510px
+}
+
+.categories .tabs .line span.pos-5 {
+    left: 560px
+}
+
+.list {
+    margin-top: -60px;
+    margin-bottom: 100px;
+    padding-bottom: 80px;
+    overflow: hidden;
+    transition: ease 0.5s
+}
+
+.more-wrapper {
+  position: absolute;
+  left: 0;
+  float: left;
+  width: 100%;
+  height: 150px;
+  bottom: 0px;
+  background-color: #fff;
+}
+
+.more {
+  background-color: #23939f;
+  position: static;
+  margin: 60px auto;
+  width: 220px
+}
+
+.more:hover {
+  background-color: #fc7e10
+}
+
+.list .card {
+  margin: 0; margin-bottom: 20px
+}
+
+.list .card:hover img {
+    opacity: 1;
+    -webkit-transform: scale(1.1) translateX(-50%) translateY(-50%);
+    transform: scale(1.1) translateX(-50%) translateY(-50%)
+}
+
+.list .image {
+    width: 40%;
+    overflow: hidden;
+    height: 340px
+}
+
+.list .image img {
+    opacity: .8;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: ease .5s;
+    transition: ease .5s
+}
+
+.list h3 {
+    width: 50%;
+    margin-bottom: 25px;
+    margin-left: 2%
+}
+
+.list h3, .list h3 a {
+    float: left;
+    font-size: 36px;
+    color: #23939f
+}
+
+.list h3 a {
+    width: 100%
+}
+
+.list p, .list p a {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #4A4A4A;
+    margin-bottom: 35px;
+    line-height: 30px;
+    font-weight: 300;
+    float: left;
+    width: 50%;
+    margin-left: 2%
+}
+
+.list p a {
+    color: #23939f;
+    width: auto;
+    margin: 0 7px 0 0
+}
+
+.list .area-date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    padding: 10px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.list .post-categories a, .list .post-categories {
+  display: block;
+  color: #23939f!important;
+  margin-right: 0!important;
+  text-transform: initial!important;
+  display: block;
+  margin: 0 5px
+}
+
+.list .post-categories a[href="http://www.escoladireta.com.br/category/todos/"] {
+  display: none!important;
+}
+
+.list .area-date a, .list .area-date span {
+    font-size: 14px;
+    color: #B2B2B2;
+    font-weight: 400;
+    padding: 0;
+    float: left
+}
+
+.list .post-categories span {
+  color: #23939f;
+  display: block;
+  margin-left: 5px;
+}
+
+.list .post-categories, .list .post-categories li {
+  list-style: disc;
+}
+
+.list .post-categories li {
+  display: list-item;
+}
+
+.list .post-categories li:last-child {
+  display: none
+}
+
+.list .post-categories li a {
+  float: none;
+}
+
+.list .post-categories span:last-child {
+  display: none
+}
+
+.list .area-date a.leia {
+    float: right;
+    color: #47c3cf!important;
+    font-weight: 400;
+    margin-right: 0!important
+}
+
+.list .area-date i {
+    float: left;
+    margin-top: 4px;
+    margin-right: 10px;
+    color: #B2B2B2
+}
+
+.single {
+    padding: 0;
+    margin-top: 100px
+}
+
+.single h1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    font: 200 60px RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    color: #fff;
+    padding: 0 14px 32px
+}
+
+.single .image {
+    overflow: hidden;
+    margin: 0 0 80px;
+    position: relative;
+    max-height: 700px;
+    min-height: 300px;
+    background: #273238;
+    float: left;
+    width: 100%
+}
+
+.single .image img {
+    width: 100%;
+    height: auto
+}
+
+.single .holder {
+    padding: 400px 0 0;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .8));
+    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .8));
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.single aside {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 4px
+}
+
+.single aside.fixed {
+    position: fixed;
+    top: 65px
+}
+
+.single aside.absolute {
+    position: absolute
+}
+
+.single aside .back {
+    margin: 0 0 30px;
+    color: #ABC772
+}
+
+.single aside ul {
+    margin: 0;
+    padding: 0
+}
+
+.single aside a {
+    color: #ABC772
+}
+
+.single article h1 {
+    font-size: 36px;
+    margin: 0 0 20px;
+    position: relative;
+    top: -180px
+}
+
+.single article img {
+    max-width: 100%;
+    height: auto
+}
+
+.about {
+    background: #8AB03F;
+    padding: 40px 0
+}
+
+.about .wrapper {
+    position: relative;
+    padding: 20px 15px
+}
+
+.about .button {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    font-size: 14px;
+    margin-top: -15px;
+    background: #1E1F1D;
+    padding: 6px 16px;
+    color: #fff;
+    left: 15px;
+    border-radius: 4px;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.about .button:hover {
+    background: #fff;
+    text-decoration: none;
+    color: #1E1F1D
+}
+
+.about .button.right {
+    right: 15px;
+    left: inherit
+}
+
+.about .center {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto
+}
+
+.about .center h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff
+}
+
+.about .center p {
+    font-size: 16px;
+    margin: 16px 0 0
+}
+
+.utils {
+    border-top: 1px solid #ABC772;
+    background: #8AB03F;
+    padding: 40px 0
+}
+
+.utils .wrapper {
+    position: relative;
+    padding: 20px 15px
+}
+
+.loader, .utils form, .utils form i, .utils form label, .utils form span, .utils nav {
+    position: absolute
+}
+
+.utils nav {
+    top: 42px;
+    left: 15px;
+    margin: 0;
+    padding: 0
+}
+
+.utils nav li {
+    color: #fff;
+    display: inline;
+    margin-left: 10px
+}
+
+.utils nav li:first-child {
+    margin: 0
+}
+
+.utils nav li a {
+    color: #fff
+}
+
+.utils .center {
+    color: #fff;
+    font-size: 14px;
+    text-align: center
+}
+
+.utils .center .social {
+    margin: 10px 0 0;
+    clear: left
+}
+
+.utils .center .social a {
+    -webkit-font-smoothing: antialiased;
+    border-radius: 20px;
+    border: 1px solid #1E1F1D;
+    color: #1E1F1D;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 2px;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.utils .center .social a:hover {
+    text-decoration: none;
+    background: #1E1F1D;
+    color: #8AB03F
+}
+
+.utils form {
+    width: 240px;
+    padding: 6px;
+    top: 38px;
+    border-bottom: 1px solid #fff;
+    right: 15px
+}
+
+.utils form i {
+    color: #fff;
+    font-size: 18px
+}
+
+.utils form span {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    height: 1px;
+    bottom: -1px;
+    width: 0;
+    left: 50%;
+    background: #1E1F1D
+}
+
+.utils form label {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    color: #fff;
+    top: 6px;
+    font-size: 14px;
+    left: 33px
+}
+
+.utils form input {
+    outline: 0;
+    border: 0;
+    background: 0 0;
+    width: 100%;
+    padding: 0 0 0 26px;
+    font-size: 14px;
+    color: #fff
+}
+
+.utils form .active input~span, .utils form input:focus~span {
+    left: 0;
+    width: 100%
+}
+
+.utils form .active input+label, .utils form input:focus+label {
+    top: -14px;
+    font-size: 12px
+}
+
+.utils form button {
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    line-height: 32px;
+    position: absolute;
+    right: -40px;
+    background: #1E1F1D;
+    color: #8AB03F;
+    border: 0;
+    border-radius: 20px;
+    padding: 0;
+    top: 0
+}
+
+.utils form span.field-validation-error {
+    left: 0;
+    width: 100%;
+    top: 34px;
+    background: 0 0;
+    text-align: left;
+    color: #C0392B
+}
+
+.circular, .loader {
+    height: 40px;
+    width: 40px
+}
+
+.utils form button:hover {
+    color: #1E1F1D;
+    background: #fff
+}
+
+.loader {
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    zoom: 1.7
+}
+
+.circular {
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
+    position: relative
+}
+
+.path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124
+    }
+}
+
+@-webkit-keyframes color {
+    0%, 100% {
+        stroke: #d62d20
+    }
+    40% {
+        stroke: #0057e7
+    }
+    66% {
+        stroke: #008744
+    }
+    80%, 90% {
+        stroke: #ffa700
+    }
+}
+
+@keyframes color {
+    0%, 100% {
+        stroke: #d62d20
+    }
+    40% {
+        stroke: #0057e7
+    }
+    66% {
+        stroke: #008744
+    }
+    80%, 90% {
+        stroke: #ffa700
+    }
+}
+
+@media (max-width:789px) {
+    header .desktop {
+        display: none
+    }
+    .mobile-nav, .utils nav li, header .mobile {
+        display: block
+    }
+    .utils nav {
+        position: static;
+        text-align: center;
+        margin-bottom: 30px
+    }
+    .utils nav li {
+        margin-top: 20px
+    }
+    .utils nav li:first-child {
+        margin-top: 0
+    }
+    .utils nav li.bull {
+        display: none
+    }
+    .utils form {
+        position: relative;
+        top: 0;
+        margin: 30px auto 0
+    }
+    .about .button, footer .logo, footer small {
+        display: block;
+        position: static
+    }
+    .list .card .image {
+        margin: 0 0 20px;
+        width: 100%
+    }
+    .list .card .image img {
+        width: 100%;
+        border-radius: 4px 4px 0 0
+    }
+    .list .card .title {
+        margin: 10px 20px
+    }
+    .list .card small {
+        margin: 0 20px;
+        float: left;
+        width: 100%
+    }
+    .list .card ul {
+        margin: 10px;
+        float: left
+    }
+    .row  .col.s9 {
+      float: left;
+      margin-left: 0;
+      width: 100%;
+    }
+      .categories .col.s8 {
+          height: 50px;
+          padding: 0
+      }
+      .categories .tabs {
+          height: 50px;
+          width: 100%;
+          overflow-x: scroll;
+          overflow-y: hidden
+      }
+      .categories .tabs .tab {
+          overflow: visible;
+          margin: 0!important;
+          min-width: 140px
+      }
+      .categories .tabs .tab a {
+          width: 100%
+      }
+      .categories .tabs .indicator {
+          bottom: 2px
+      }
+      .list .card {
+          padding-bottom: 110px
+      }
+      .list .card .image {
+        height: 170px
+      }
+      .list .card .image img {
+        height: auto;
+        width: 100%;
+      }
+      .list h3 a {
+        font-size: 28px;
+        line-height: 30px;
+      }
+      .list h3, .list p {
+        width: 100%;
+        padding: 16px;
+        margin: 0;
+        padding-bottom: 0;
+        max-height: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .list .area-date {
+          width: 100%
+      }
+    .single aside {
+        border-bottom: 1px solid #8AB03F;
+        padding: 0 0 30px;
+        margin: 0 0 30px
+    }
+    .single article {
+        padding: 0
+    }
+    .about .button {
+        margin: 30px 15px;
+        text-align: center
+    }
+    .categories .tabs {
+        overflow: auto
+    }
+    .categories .tabs ul {
+        white-space: nowrap
+    }
+    footer small {
+        margin-top: 30px
+    }
+    footer .logo {
+        margin-bottom: 30px
+    }
+}
+
+@media(max-width: 767px) {
+  .categories .col.s1 {display: none}
+  .categories .col.s10 {
+    width: 100%;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}

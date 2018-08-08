@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.escoladireta.com.br	TRUE	/	FALSE	1999999999	__cfduid	d424579d7766fbc0ae694a125015db7431508368180
-

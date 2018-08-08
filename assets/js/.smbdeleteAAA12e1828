@@ -1,0 +1,254 @@
+$("#banner").tubular({
+    videoId: "umS9WRN2CLI",
+    mudo: !0
+})
+
+$("#menu li a").click(function(){
+  var anchor = $(this).attr("id");
+
+  anchor = anchor.replace('btn-', '');
+
+  if( $('header').hasClass('active') && anchor != 'sistema' ) {
+    $("html, body").animate({scrollTop: $("#" + anchor).offset().top - 75}, 400, 'linear');
+  } else {
+    $("html, body").animate({scrollTop: $("#" + anchor).offset().top}, 400, 'linear');
+  }
+
+});
+  $(window).scroll(function(){
+    var scroll = $(this).scrollTop();
+    var sobreTop = $('#sobre').offset().top - 75;
+    var aplicativoTop = $('#aplicativo').offset().top - 240;
+    var sistemaTop = $('#sistema').offset().top - 75;
+    var blogTop = $('#area-blog').offset().top - 240;
+    var contatoTop = $('#contato').offset().top - 240;
+
+    if( scroll < sobreTop + $('#sobre').height() ) {
+      $('#menu li a').removeClass("active");
+      $("#menu li a#btn-embarque").addClass("active");
+    } else if( scroll > aplicativoTop && scroll < aplicativoTop + $('#aplicativo').height() ) {
+      $('#menu li a').removeClass("active");
+      $("#menu li a#btn-aplicativo").addClass("active");
+    } else if( scroll > sistemaTop && scroll < sistemaTop + $('#sistema').height() ) {
+      $('#menu li a').removeClass("active");
+      $("#menu li a#btn-sistema").addClass("active");
+    } else if( scroll > blogTop && scroll < blogTop + $('#area-blog').height() ) {
+      $('#menu li a').removeClass("active");
+      $("#menu li a#btn-area-blog").addClass("active");
+    } else if( scroll >= contatoTop ) {
+      $('#menu li a').removeClass("active");
+      $("#menu li a#btn-contato").addClass("active");
+    }
+
+  });
+$("#banner").height($(window).height() + 10), $("#info-banner").css("top", $(window).height() / 2 - 225);
+var windowHeight = $(window).height();
+if (window.matchMedia('(min-width: 767px)').matches) {
+  $("#area-blog .card").css("height", windowHeight / 2 + 100);
+  $(".modal").css("height", windowHeight - 120);
+}
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        scroll = $(this).scrollTop();
+        if (scroll >= $('#sobre').offset().top && scroll < $(document).height() - $(window).height() - 330) {
+            if ($("#omn-container:hidden")) {
+                $('#omn-container').show();
+            }
+        } else {
+            if ($("#omn-container:visible")) {
+                $('#omn-container').hide();
+            }
+        }
+    });
+});
+
+//======== ANIMATION SCROLL =======//
+if (window.matchMedia('(min-width: 767px)').matches) {
+  //Troca imagem
+  $(document).on('click', '.featureFunction li', function(){
+    var dataImg = $(this).attr('data');
+    var dataLi = $(this).closest('.app-function').attr('id');
+    dataLi = dataLi.replace('app-', '');
+
+    $('#aplicativo #screen-' + dataLi).remove();
+    $('#aplicativo img').removeClass('active');
+    $('#aplicativo .img').append('<img id="screen-' + dataLi + '" src="http://192.168.0.1:3330/escoladireta/wp-content/themes/escoladireta/assets/img/screen-' + dataImg + '.png">');
+    setTimeout(function(){
+      $('#aplicativo img#screen-' + dataLi).addClass('active');
+    }, 10);
+
+    $(this).parent().find('li').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  //NAV CIRCLE
+  $(document).on('click', '.nav-circle li', function(){
+    var id = $(this).attr('id');
+    id = id.replace('nav-', '');
+
+    var negative = 0;
+
+    switch(id) {
+      case 'comunicacao' :
+        negative = 105;
+        break;
+      case 'academico' :
+        negative = 105;
+        break;
+      case 'controle' :
+        negative = 105;
+        break;
+      case 'seguranca' :
+        negative = 275;
+        break;
+      case 'integracao' :
+        negative = 455;
+        break;
+      case 'economia' :
+        negative = 455;
+        break;
+    }
+
+    if( $(this).closest('.nav-circle').attr('id') == 'nav-aplicativo' ) {
+      $("html, body").animate({scrollTop: $('#app-' + id).offset().top - 75}, 500, 'linear');
+    } else {
+      $("html, body").animate({scrollTop: $('#sis-' + id).offset().top - 205}, 500, 'linear');
+    }
+
+    $('.nav-circle li span').removeClass('active');
+    $(this).find('span').addClass('active');
+  });
+
+$(window).scroll(function(){
+  //APLICATIVO
+  var imgMiddle = 280;
+  var imgTop = ($(window).height() / 2) - imgMiddle;
+  var appTop = $('#aplicativo').offset().top - imgTop;
+  var appBottom = $('#app-controle .featureFunction').offset().top - imgTop;
+
+  var imgHeight = $('#aplicativo .img').height() / 2;
+
+  var comunicacaoTop = $('#app-comunicacao').offset().top - imgHeight - 105;
+  var academicoTop = $('#app-academico').offset().top - imgHeight - 105;
+  var controleTop = $('#app-controle').offset().top - imgHeight - 105;
+  var scroll = $(this).scrollTop();
+
+  if ( scroll >= appTop + 22 && scroll <= appBottom ) {
+    $('#aplicativo #area-fixed').addClass('fixed').removeClass('bottom');
+  } else if( scroll > appBottom ) {
+    $('#aplicativo #area-fixed').removeClass('fixed').addClass('bottom');
+  } else {
+    $('#aplicativo #area-fixed').removeClass('fixed').removeClass('bottom');
+  }
+
+  if ( scroll >= comunicacaoTop && scroll < academicoTop ) {
+    $('#aplicativo .img img').removeClass('active');
+    $('#screen-comunicacao').addClass('active');
+    $('#nav-aplicativo span').removeClass('active');
+    $('#nav-comunicacao span').addClass('active');
+  } else if ( scroll >= academicoTop && scroll < controleTop ) {
+    $('#aplicativo .img img').removeClass('active');
+    $('#screen-academico').addClass('active');
+    $('#nav-aplicativo span').removeClass('active');
+    $('#nav-academico span').addClass('active');
+  } else if ( scroll >= controleTop ) {
+    $('#aplicativo .img img').removeClass('active');
+    $('#nav-comunicacao span').addClass('active');
+    $('#screen-controle').addClass('active');
+    $('#nav-aplicativo span').removeClass('active');
+    $('#nav-controle span').addClass('active');
+  } else {
+    $('#aplicativo .img img').removeClass('active');
+    $('#screen-comunicacao').addClass('active');
+    $('#nav-aplicativo span').removeClass('active');
+    $('#nav-comunicacao span').addClass('active');
+  }
+
+  //SISTEMA
+  var sisImgTop = ($(window).height() / 2) - ($('#sistema img').height() / 2 ) + 30;
+  var sistTop = $('#sistema').offset().top - sisImgTop + 90;
+  var sistBottom = sistTop + $('#sistema').height() - $('#sistema img').height() - 209;
+
+  var segurancaTop = $('#sis-seguranca').offset().top - 275;
+  var integracaoTop = $('#sis-integracao').offset().top - 455;
+  var economiaTop = $('#sis-economia').offset().top - 455;
+
+  if( scroll >= sistTop && scroll <= sistBottom  ) {
+    $('#sistema .img').addClass('fixed').removeClass('bottom');
+  } else if( scroll > sistBottom ) {
+    $('#sistema .img').removeClass('fixed').addClass('bottom');
+  } else {
+    $('#sistema .img').removeClass('fixed').removeClass('bottom');
+  }
+
+  if( scroll >= segurancaTop && scroll < integracaoTop ) {
+    $('#sistema img').removeClass('active');
+    if( !$('#screen-seguranca').hasClass('active') ) {
+      $('#screen-seguranca').addClass('active');
+    }
+    $('#nav-sistema li span').removeClass('active');
+    $('#nav-seguranca span').addClass('active');
+  } else if( scroll >= integracaoTop && scroll < economiaTop ) {
+    $('#sistema img').removeClass('active');
+    if( !$('#screen-integracao').hasClass('active') ) {
+      $('#screen-integracao').addClass('active');
+    }
+    $('#nav-sistema li span').removeClass('active');
+    $('#nav-integracao span').addClass('active');
+  } else if( scroll >= economiaTop ) {
+    $('#sistema img').removeClass('active');
+    if( !$('#screen-economia').hasClass('active') ) {
+      $('#screen-economia').addClass('active');
+    }
+    $('#nav-sistema li span').removeClass('active');
+    $('#nav-economia span').addClass('active');
+  } else {
+    $('#sistema img').removeClass('active');
+    if( !$('#screen-seguranca').hasClass('active') ) {
+      $('#screen-seguranca').addClass('active');
+    }
+    $('#nav-sistema li span').removeClass('active');
+    $('#nav-seguranca span').addClass('active');
+  }
+
+  if( scroll >= appTop - 200 && scroll <= appBottom - 200 ) {
+    $('#nav-aplicativo').show();
+  } else {
+    $('#nav-aplicativo').hide();
+  }
+
+  if( scroll >= sistTop - 200 && scroll <= sistBottom - 200 ) {
+    $('#nav-sistema').show();
+  } else {
+    $('#nav-sistema').hide();
+  }
+
+  //imagem no centro
+  $('head').append('<style> #area-fixed.fixed {top: ' + imgTop + 'px!important} </style>');
+  $('head').append('<style> #sistema .img.fixed {top: ' + sisImgTop + 'px!important} </style>');
+
+});
+
+}
+
+//Video
+$('#btn-video').hover(function(){
+  $(this).toggleClass('active');
+});
+
+$('#btn-video').click(function(){
+  playPause();
+  if( $(this).find('i').hasClass('fa-pause') ) {
+    $(this).find('i').removeClass('fa-pause').addClass('fa-play')
+  } else {
+    $(this).find('i').addClass('fa-pause').removeClass('fa-play')
+  }
+});
+
+function playPause() {
+    if (document.getElementById('video-desk').paused)
+        document.getElementById('video-desk').play();
+    else
+        document.getElementById('video-desk').pause();
+}
